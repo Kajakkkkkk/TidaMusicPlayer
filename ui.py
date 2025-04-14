@@ -3,6 +3,38 @@ from PyQt5.QtCore import Qt
 
 
 def build_ui(self):
+    self.setStyleSheet("""
+        QWidget {
+            background-color: #121212;
+            color: #FFFFFF;
+            font-size: 14px;
+        }
+        QPushButton {
+            background-color: #1E1E1E;
+            border: 1px solid #333;
+            border-radius: 5px;
+            padding: 5px 10px;
+        }
+        QPushButton:hover {
+            background-color: #2C2C2C;
+        }
+        QPushButton:pressed {
+            background-color: #3A3A3A;
+        }
+        QSlider::groove:horizontal {
+            height: 6px;
+            background: #333;
+            border-radius: 3px;
+        }
+        QSlider::handle:horizontal {
+            background: #00BCD4;
+            width: 12px;
+            height: 12px;
+            margin: -4px 0;
+            border-radius: 6px;
+        }
+    """)
+
     self.song_title = QLabel("SONG")
     self.time_label = QLabel("00:00 / 00:00")
     self.bitrate_label = QLabel("BITRATE: 128 kbps")
